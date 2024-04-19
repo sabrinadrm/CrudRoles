@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello !{% endblock %}
+
+{% block body %}
+<h1>Bienvenue sur mon site</h1>
+    <div>
+         <a href={{path('app_login')}}>connexion </a>
+    </div>
+        {% if app.user == false %}
+             <a href={{path('app_register')}}>inscription </a>
+             {% else %}
+                <div>
+                     <a href={{path('app_logout')}}>deconnexion </a>
+                </div>
+ 
+               
+               
+            
+ 
+    
+        {% endif %}
+
+    
+{% endblock %}
